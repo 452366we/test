@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get_login</title>
+</head>
+<body>
+    用户名<input type="text" id="uname">
+    密码<input type="password" id="upwd">
+    <button onclick="login()">登录</button>
+<script>
+
+    // function login(){
+    //     let data=`${uname.value}&${upwd.value}`;
+    //     //获取input中的值，dom操作
+    //     let xhr=new XMLHttpRequest();
+    //     xhr.onreadystatechange=function(){
+    //         if(xhr.readyState==4 && xhr.status==200){
+    //             let result=xhr.responseText;
+    //             if(result==1){
+    //                 alert("登录成功！");
+    //             }else if(result==0){
+    //                 alert("登录失败！用户名或密码错误！")
+    //             }else{
+    //                 alert("未接收到用户信息！")
+    //             }
+    //         }
+    //     }
+    //     xhr.open("get","/demo/login/"+data,true);
+    //     xhr.send(null);
+    // }
+    function login(){
+        let xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                let result=xhr.responseText;
+                alert(result);
+            }
+        };
+        xhr.open("post","/demo/post_login",true);
+        //创建请求主体，把数据放到请求主体中
+        let formdata=`uname=${uname.value}&upwd=${upwd.value}`;
+        //由于要传递整个请求主体，而请求主体中有特殊字符，必须修改请求头
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.send(formdata);
+    }
+</script>
+</body>
+</html>

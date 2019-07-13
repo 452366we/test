@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>queryUser</title>
+    <style>
+        input{margin-bottom:10px;}
+    </style>
+</head>
+<body onload="queryUser()">
+    用户ID：<input type="text" id="uid" readonly><br>
+    <!--<button onclick="queryUser()">查询</button><br>-->
+    用户姓名：<input type="text" id="uname"><br>
+    用户密码：<input type="text" id="upwd"><br>
+    电子邮箱：<input type="text" id="email"><br>
+    联系电话：<input type="text" id="phone"><br>
+    真实姓名：<input type="text" id="user_name"><br>
+    用户性别：<input type="radio" id="male" name="gender" class="gender"><label for="male">男</label>
+    <input type="radio" id="female" name="gender" class="gender"><label for="female">女</label>
+    <input type="radio" id="unknown" name="gender" class="gender"><label for="unknown">性别不详</label><br>
+    <button onclick="updateUser()">修改</button><br>
+<script>
+        function queryUser(){
+            //获取url传递过来的uid，使用js操作浏览器对象
+            let urlParams=new URLSearchParams(location.search);
+            let $uid=urlParams.get("uid");
+
+            let xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    let result=xhr.responseText;
+                    if(result==0){
+                        alert("查询失败！");
+                        return;
+                    }
+                    let user=JSON.parse(result)[0];
+                    uid.value=user.uid;
+                    uname.value=user.uname;
+                    upwd.value=user.upwd;
+                    email.value=user.email;
+                    phone.value=user.phone;
+                    user_name.value=user.user_name;
+                    if(user.gender==1){
+                        male.checked="checked";
+                    }else if(user.gender==0){
+                        female.checked="checked";
+                    }else{
+                        unknown.checked="checked";
+                    };
+                }
+            }
+            xhr.open("get","/pro/v1/queryuser/"+$uid,true);
+            xhr.send(null);
+        }
+        function updateUser(){
+            let gender=null;
+            if(male.checked){
+               gender=1;
+            }else if(female.checked){
+                gender=0;
+            }
+
+            let xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4 && xhr.status==200){
+                    let result=xhr.responseText;
+                    if(result==1) {
+                        alert("修改成功！")
+                        location.href="http://127.0.0.1:8080/showList.html";
+                    }else{
+                        alert("修改失败！")
+                    }
+                }
+            }
+            xhr.open("put","/pro/v1/updateuser/",true);
+            let formdata=`uid=${uid.value}&uname=${uname.value}&upwd=${upwd.value}&email=${email.value}&phone=${phone.value}&user_name=${user_name.value}&gender=${gender}`;
+            //由于要传递整个请求主体，而请求主体中有特殊字符，必须修改请求头
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send(formdata);
+
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>user_list</title>
+  <style>
+    table{
+      margin-top:20px;
+      width:400px;
+      border:1px solid #ccc;
+      background-color:#fff;
+      text-align:center;
+      font-weight:bold;
+      font-size:16px;
+    }
+    td{
+      border:1px solid #ccc;
+      height:36px;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        大小：<input type="text" id="count">
+        页码：<input type="text" id="pno">
+        <button onclick="showTab()">显示</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>用户id</td>
+                    <td>用户名</td>
+                    <td>用户密码</td>
+                    <td>用户邮箱</td>
+                </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+<script>
+function showTab(){
+    let data=`?count=${count.value}&pno=${pno.value}`
+    let xhr=new XMLHttpRequest();
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            let data=xhr.responseText;
+            //json解析，解析结果是一个对象数组
+            let arr=JSON.parse(data);
+            let htmlstr=`<tbody>`;
+            for(let i=0;i<arr.length;i++){
+                htmlstr+=`
+                <tr>
+                   <td>${arr[i].uid}</td>
+                   <td>${arr[i].uname}</td>
+                   <td>${arr[i].upwd}</td>
+                   <td>${arr[i].email}</td>
+                 </tr>
+                    `
+            }
+            htmlstr+=`</tbody>`;
+            content.innerHTML=htmlstr;
+        }
+    }
+    xhr.open("get","/user/list"+data,true);
+    xhr.send(null);
+}
+</script>
+</body>
+</html>

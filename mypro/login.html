@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+    用户名：<input type="text" id="uname"><br>
+    密码：<input type="password" id="upwd"><br>
+    <button onclick="mylogin()">登录</button>
+<script>
+    function mylogin(){
+        let data=`${uname.value}&${upwd.value}`;
+        if(!uname.value){
+            alert("用户名不能为空！");
+            return;
+        }
+        if(!upwd.value){
+            alert("密码不能为空！");
+            return;
+        }
+        let xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4 && xhr.status==200){
+                let result=xhr.responseText;
+                if(result==1){
+                    alert("登录成功！");
+                }else{
+                    alert("登录失败！");
+                }
+            }
+        }
+        xhr.open("get","/pro/v1/login/"+data,true);
+        xhr.send(null);
+    }
+</script>
+</body>
+</html>
