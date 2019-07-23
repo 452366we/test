@@ -5,152 +5,15 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="../img/favicon.ico" rel="shortcut icon">
-  <link href="../static/css/normalize.css" rel="stylesheet">
-    <link href="../static/css/general.css" rel="stylesheet">
-  <script src="../static/js/jquery.min.js"></script>
+  <link href="img/favicon.ico" rel="shortcut icon">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/user_login.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
   <title>欢迎来到学子商城</title>
-  <style>
-      /*广告*/
-      .banner{
-          width:100%;
-          height:560px;
-          background:url("../img/login/bg.png") no-repeat center center;
-          background-size:cover;
-          position:relative;
-      }
-      .banner .container_box{
-          position:relative;
-      }
-      .logreg_box{
-          margin-top:100px;
-          width:280px;
-          background-color:rgba(0,0,0,.3);
-          position:absolute;
-          padding:10px;
-          right:0;
-          top:50%;
-          font-size:12px;
-          color:#fff;
-          border-radius:2px;
-      }
-      .logreg_box input{
-          width:260px;
-          height:32px;
-          padding-left:16px;
-          margin-top:10px;
-      }
-      .logreg_box .inner_box{
-          position:relative;
-      }
-      .logreg_box .inner_box img{
-          position:absolute;
-          z-index:1;
-          top:14px;
-          right:10px;
-      }
-      .logreg_box  .logreg_tip{
-          display:block;
-          padding-left:10px;
-          opacity:1;
-          font-size:12px;
-          margin-top:10px;
-      }
-      .logreg_box .logreg_tip_warning{
-          color:#f71147;
-      }
-      .logreg_box .logreg_tip_formal{
-          color:#999;
-      }
-      .logreg_box img{
-          width:28px;
-          height:28px;
-      }
-      .logreg_title{
-          border-bottom:1px solid #fff;
-          height:36px;
-          margin:10px 0;
-      }
-      .logreg_title ul li{
-          display:inline-block;
-          width:50%;
-          height:36px;
-          font-size:16px;
-          text-align:center;
-          float:left;
-      }
-      .logreg_title ul li a{
-          color:#fff;
-      }
-      .logreg_title ul li:hover,.current{
-          border-bottom:1px solid #0aa1ed;
-      }
-      .logreg_title ul li:hover a{
-          color:#0aa1ed;
-      }
-      .logreg_title ul .current a{
-          color:#0aa1ed;
-      }
-      .logreg_hint{
-          margin-top:40px;
-          margin-bottom:10px;
-      }
-      .logreg_hint .logreg_hint_auto{
-          width:50%;
-          height:12px;
-          display:block;
-          position:absolute;
-          left:0;
-          bottom:0;
-          vertical-align:middle;
-      }
-      .logreg_hint .logreg_hint_auto input,label{
-          position:absolute;
-          display:block;
-          width:14px;
-          height:14px;
-          font-size:12px;
-          line-height:12px;
-          margin:0;
-      }
-      .logreg_hint .logreg_hint_auto label{
-          bottom:0;
-          left:20px;
-          width:50%;
-          height:12px;
-      }
-      .logreg_hint .logreg_hint_forget{
-          width:50%;
-          display:block;
-          position:absolute;
-          right:0;
-          bottom:0;
-          text-align:right;
-      }
-      .logreg_hint .logreg_hint_forget a{
-          color: #ed8e14;
-      }
-      .logreg_btn button{
-          margin-top:10px;
-          width:100%;
-          height:40px;
-          border:none;
-          background-color:#0aa1ed;
-          color:#fff;
-          font-size:16px;
-          border-radius:2px;
-      }
-  </style>
 </head>
 <body>
-<header>
-  <div class="container_box">
-      <a href="#">
-          <img src="../img/header/logo.png" alt="logo" align="center">
-      </a>
-      <span>欢迎来到学子商城</span>
-  </div>
-</header>
+<iframe src="header.html" width="100%" height="100px" style="display: block" scrolling="no" frameborder="0"></iframe>
 <section class="banner">
     <div class="container_box">
         <div class="logreg_box" id="logreg_box">
@@ -168,7 +31,7 @@
                 <div class="logreg_username inner_box">
                     <span>
                         <input type="text" placeholder="请输入您的用户名" id="log_uname" minlength="6" maxlength="9">
-                        <img src="../img/login/uname.png">
+                        <img src="img/login/uname.png">
                     </span>
                         <span class="logreg_tip_warning logreg_tip">
                         &nbsp;
@@ -177,7 +40,7 @@
                 <div class="logreg_userpassword inner_box">
                     <span>
                         <input type="password" placeholder="请输入您的密码" id="log_upwd" minlength="6" maxlength="12">
-                        <img src="../img/login/upwd.png">
+                        <img src="img/login/upwd.png">
                     </span>
                 </div>
                 <div class="logreg_hint inner_box">
@@ -199,7 +62,7 @@
                 <div class="logreg_username inner_box">
                     <span>
                         <input type="text" placeholder="请输入用户名" id="reg_uname" minlength="6" maxlength="9">
-                        <img src="../img/login/uname.png">
+                        <img src="img/login/uname.png">
                     </span>
                     <span class="logreg_tip">
                         &nbsp;
@@ -208,7 +71,7 @@
                 <div class="logreg_userpassword inner_box">
                     <span>
                         <input type="text" placeholder="请输入密码" id="reg_upwd" minlength="6" maxlength="12">
-                        <img src="../img/login/upwd.png">
+                        <img src="img/login/upwd.png">
                     </span>
                     <span class="logreg_tip">
                         &nbsp;
@@ -217,7 +80,7 @@
                 <div class="logreg_userconfirmpassword inner_box">
                     <span>
                         <input type="text" placeholder="请确认密码" id="reg_cpwd" minlength="6" maxlength="12">
-                        <img src="../img/login/upwd.png">
+                        <img src="img/login/upwd.png">
                     </span>
                     <span class="logreg_tip">
                         &nbsp;
@@ -226,7 +89,7 @@
                 <div class="logreg_useremail inner_box">
                     <span>
                         <input type="text" placeholder="请输入邮箱地址" id="reg_email" maxlength="20">
-                        <img src="../img/login/email.png">
+                        <img src="img/login/email.png">
                     </span>
                     <span class="logreg_tip">
                         &nbsp;
@@ -235,7 +98,7 @@
                 <div class="logreg_userphone inner_box">
                     <span>
                         <input type="text" placeholder="请输入您的手机号" id="reg_phone" maxlength="11">
-                        <img src="../img/login/phone.png">
+                        <img src="img/login/phone.png">
                     </span>
                     <span class="logreg_tip">
                         &nbsp;
@@ -250,112 +113,7 @@
         </div>
     </div>
 </section>
-<section class="information">
-    <div class="container_box">
-        <ul>
-            <li>
-                <img src="../img/footer/icon1.png">
-                <span>品质保证</span>
-            </li>
-            <li>
-                <img src="../img/footer/icon2.png">
-                <span>私人订制</span>
-            </li>
-            <li>
-                <img src="../img/footer/icon3.png">
-                <span>学员特供</span>
-            </li>
-            <li>
-                <img src="../img/footer/icon4.png">
-                <span>专属特权</span>
-            </li>
-        </ul>
-    </div>
-</section>
-<footer>
-    <div class="footer_top container_box">
-        <div class="footer_left">
-            <span>
-                <img src="../img/header/logo.png" alt="logo">
-            </span>
-            <span>
-                <img src="../img/footer/footerFont.png">
-            </span>
-        </div>
-        <div class="footer_center">
-            <ul>
-                <li>
-                    <a href="#" class="footer_center_title">买家帮助</a>
-                </li>
-                <li>
-                    <a href="#">新手指南</a>
-                </li>
-                <li>
-                    <a href="#">服务保障</a>
-                </li>
-                <li>
-                    <a href="#">常见问题</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#" class="footer_center_title">商家帮助</a>
-                </li>
-                <li>
-                    <a href="#">商家入驻</a>
-                </li>
-                <li>
-                    <a href="#">商家后台</a>
-                </li>
-                <li>
-                    <a href="#"></a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#" class="footer_center_title">关于我们</a>
-                </li>
-                <li>
-                    <a href="#">关于达内</a>
-                </li>
-                <li>
-                    <a href="#">联系我们</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../img/footer/wechat.png" alt="wechat">
-                    </a>
-                    <a href="#">
-                        <img src="../img/footer/sinablog.png" alt="sina">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer_right">
-            <span>
-                <img src="../img/footer/erweima.png">
-            </span>
-            <span>
-                <ul>
-                    <li>
-                        学子商城客户端
-                    </li>
-                    <li>
-                        <img src="../img/footer/ios.png" alt="ios">
-                    </li>
-                    <li>
-                        <img src="../img/footer/android.png" alt="android">
-                    </li>
-                </ul>
-            </span>
-        </div>
-    </div>
-    <div class="footer_bottom container_box">
-        <span>
-            &copy2017达内科技有限公司&nbsp;版权所有&nbsp;京ICP备08000853号-75
-        </span>
-    </div>
-</footer>
+<iframe src="footer.html" width="100%" height="364px" scrolling="no" frameborder="0"></iframe>
 <script>
     //控制tab条件渲染
     $("#log_point").click(function(){
