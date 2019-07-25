@@ -3,18 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/login_header.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
-    <title>header</title>
+    <script src="js/jquery.min.js"></script>
+    <title>login_header</title>
 </head>
 <body>
 <header>
     <div class="container_box">
-        <a href="#">
+        <a class="logo" href="#">
             <img src="img/header/logo.png" alt="logo" align="center">
         </a>
-        <span>欢迎来到学子商城</span>
+        <span>
+            <input type="search" placeholder="请输入您要搜索的内容" maxlength="18">
+            <img id="btn_search" src="img/header/search.png">
+            <div class="search">
+                <div class="search_sel">
+                    <b>商品类型</b>
+                    <img src="img/header/header_normal.png" align="center">
+                </div>
+                <div class="search_content">
+                    <ul>
+                        <li>学习用品</li>
+                        <li>电脑办公</li>
+                        <li>学习用品</li>
+                        <li>电脑办公</li>
+                        <li>学习用品</li>
+                        <li>电脑办公</li>
+                        <li>学习用品</li>
+                        <li>电脑办公</li>
+                        <li>学习用品</li>
+                        <li>电脑办公</li>
+                    </ul>
+                    <ul>
+                        <li>Lenovo</li>
+                        <li>Apple</li>
+                        <li>Dell</li>
+                        <li>Lenovo</li>
+                        <li>Apple</li>
+                        <li>Dell</li>
+                        <li>Lenovo</li>
+                        <li>Apple</li>
+                        <li>Dell</li>
+                    </ul>
+                    <ul>
+                        <li>MacBook Pro</li>
+                        <li>MacBook Air</li>
+                        <li>iMac</li>
+                        <li>MacBook Pro</li>
+                        <li>MacBook Air</li>
+                        <li>iMac</li>
+                        <li>MacBook Pro</li>
+                        <li>MacBook Air</li>
+                        <li>iMac</li>
+                        <li>MacBook Pro</li>
+                        <li>MacBook Air</li>
+                        <li>iMac</li>
+                        <li>MacBook Pro</li>
+                        <li>MacBook Air</li>
+                        <li>iMac</li>
+                    </ul>
+                </div>
+            </div>
+
+        </span>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="img/header/care.png" align="center">
+                    </a>
+                    <b>|</b>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/header/order.png" align="center">
+                    </a>
+                    <b>|</b>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/header/shop_car.png" align="center">
+                    </a>
+                    <b>|</b>
+                </li>
+                <li>
+                    <a href="user_login.html">
+                        注册
+                    </a>
+                    <b>|</b>
+                </li>
+                <li>
+                    <a href="user_login.html">
+                        登录
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
+<script>
+    $(".search_content").hide();
+    $(".search_sel").click(function () {
+        $(".search_content").show();
+    });
+    $(".search").mouseleave(function () {
+        $(".search_content").hide();
+    });
+    //鼠标进入头部图标变色
+    $("header .menu li:nth-child(1) img").mouseenter(function () {
+        $("header .menu li:nth-child(1) img").attr("src","img/header/care1.png");
+    });
+    $("header .menu li:nth-child(1) img").mouseleave(function () {
+        $("header .menu li:nth-child(1) img").attr("src","img/header/care.png");
+    });
+    $("header .menu li:nth-child(2) img").mouseenter(function () {
+        $("header .menu li:nth-child(2) img").attr("src","img/header/order1.png");
+    });
+    $("header .menu li:nth-child(2) img").mouseleave(function () {
+        $("header .menu li:nth-child(2) img").attr("src","img/header/order.png");
+    });
+    $("header .menu li:nth-child(3) img").mouseenter(function () {
+        $("header .menu li:nth-child(3) img").attr("src","img/header/shop_car1.png");
+    });
+    $("header .menu li:nth-child(3) img").mouseleave(function () {
+        $("header .menu li:nth-child(3) img").attr("src","img/header/shop_car.png");
+    });
+</script>
 </body>
 </html>

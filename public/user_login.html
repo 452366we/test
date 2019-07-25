@@ -13,7 +13,7 @@
   <title>欢迎来到学子商城</title>
 </head>
 <body>
-<iframe src="header.html" width="100%" height="100px" style="display: block" scrolling="no" frameborder="0"></iframe>
+<iframe src="login_header.html" width="100%" height="100px" style="display: block" scrolling="no" frameborder="0"></iframe>
 <section class="banner">
     <div class="container_box">
         <div class="logreg_box" id="logreg_box">
@@ -113,7 +113,7 @@
         </div>
     </div>
 </section>
-<iframe src="footer.html" width="100%" height="364px" scrolling="no" frameborder="0"></iframe>
+<iframe id="footer-frame" src="footer.html" width="100%" height="364px" scrolling="no" frameborder="0"></iframe>
 <script>
     //控制tab条件渲染
     $("#log_point").click(function(){
@@ -130,6 +130,18 @@
         $("#login").css("display","none");
         logreg_box.style.marginTop='36px';
     })
+    //动态获取iframe内容高度
+    function setIframeHeight(iframe) {
+        if(iframe){
+            let iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if(iframeWin.document.body){
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        }
+    }
+    window.onload = function(){
+        setIframeHeight(document.getElementById('footer-frame'));
+    }
 </script>
 </body>
 </html>

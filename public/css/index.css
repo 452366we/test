@@ -1,0 +1,93 @@
+/*导航*/
+nav{
+    height:60px;
+    background-color: #f5f5f5;
+}
+nav ul li{
+    margin-right: 40px;
+    display:inline-block;
+    line-height:40px;
+}
+nav ul li a{
+    color:#666;
+    font-size:16px;
+}
+nav ul li:hover{
+    border-bottom:2px solid #0aa1ed;
+}
+nav ul li:hover a{
+    color:#0aa1ed;
+}
+.nav-current{
+    border-bottom:2px solid #0aa1ed;
+}
+.nav-current a{
+    color:#0aa1ed;
+}
+/*轮播*/
+.banner{
+    height:400px;
+    background-color: #f5f5f5;
+}
+.banner-pic{
+    width:1000px;
+    height:400px;
+    position: absolute;
+    overflow: hidden;
+}
+.banner-pic ul li{
+    float:left;
+    display:inline-block;
+}
+.banner-arrow .left,
+.banner-arrow .right{
+    width:36px;
+    height:72px;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #000;
+    opacity: .1;
+    top:50%;
+    margin-top:-36px;
+    transition: .5s;
+}
+.banner-arrow .left:hover,
+.banner-arrow .right:hover{
+    opacity: .3;
+}
+.banner-arrow .left{
+    left:10px;
+}
+.banner-arrow .right{
+    right:10px;
+}
+.banner-arrow .left img,
+.banner-arrow .right img{
+    width:12px;
+    height:20px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-10px;
+    margin-left:-6px;
+}
+.banner-index{
+    width:400px;
+    position: absolute;
+    left:50%;
+    margin-left:-200px;
+    bottom:10px;
+    text-align:center;
+}
+.banner-index li{
+    display:inline-block;
+    margin:0 2px;
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.banner-index .banner-current{
+    background-color: #0aa1ed;
+}
+/*商品*/
