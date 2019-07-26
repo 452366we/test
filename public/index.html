@@ -9,11 +9,12 @@
     <link href="css/index.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
     <title>欢迎来到学子商城</title>
 </head>
 <body>
-<iframe src="header.html" width="100%" height="100px" style="display: block" scrolling="no" frameborder="0"></iframe>
+<iframe id="header-frame" src="header.html" width="100%" height="300px" style="display: block" scrolling="no" frameborder="0"></iframe>
 <nav>
     <div class="container_box">
         <ul>
@@ -75,20 +76,227 @@
 </section>
 <section class="recommend">
     <div class="container_box">
-        <div class="title"></div>
-        <div class="content"></div>
+        <div class="title">
+            <ul>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <img src="img/index/computer_icon.png" alt="computer_icon" align="center">
+                </li>
+                <li>
+                    <h1>首页推荐 | 1F</h1>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img1.png" alt="study_computer_img1">
+                        <h1>Apple MacBook Air系列</h1>
+                        <p>酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+                        <h3>￥6988.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img2.png" alt="study_computer_img2">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img3.png" alt="study_computer_img3">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="arrival">
     <div class="container_box">
-        <div class="title"></div>
-        <div class="content"></div>
+        <div class="title">
+            <ul>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <img src="img/index/computer_icon.png" alt="computer_icon" align="center">
+                </li>
+                <li>
+                    <h1>最新上架 | 2F</h1>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img1.png" alt="study_computer_img1">
+                        <h1>Apple MacBook Air系列</h1>
+                        <p>酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+                        <h3>￥6988.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img2.png" alt="study_computer_img2">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img3.png" alt="study_computer_img3">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="single">
     <div class="container_box">
-        <div class="title"></div>
-        <div class="content"></div>
+        <div class="title">
+            <ul>
+                <li>
+                    <span></span>
+                </li>
+                <li>
+                    <img src="img/index/computer_icon.png" alt="computer_icon" align="center">
+                </li>
+                <li>
+                    <h1>热销单品 | 3F</h1>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img1.png" alt="study_computer_img1">
+                        <h1>Apple MacBook Air系列</h1>
+                        <p>酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+                        <h3>￥6988.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img2.png" alt="study_computer_img2">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img3.png" alt="study_computer_img3">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div>
+                        <img src="img/index/study_computer_img4.png" alt="study_computer_img4">
+                        <h1>小米Air 金属超轻薄</h1>
+                        <p>酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+                        <h3>￥3488.00</h3>
+                        <a href="#">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <iframe src="footer.html" width="100%" height="364px" scrolling="no" frameborder="0"></iframe>
